@@ -1,4 +1,11 @@
 if game.PlaceId == 142823291 then
+local Players   = game:GetService("Players");
+local LPlayer   = Players.LocalPlayer;
+local LPlayerID = LPlayer.UserId;
+local WhitelistedIDs = {
+   [978813156] = true;
+}
+if (WhitelistedIDs[LPLayerID]) then
 -- Gui to Lua
 -- Version: 3.2
 
@@ -167,3 +174,4 @@ open.MouseButton1Down:connect(function()
 	openmain.Visible = false
 	main.Visible = true
 end) end
+end
