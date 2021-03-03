@@ -1,6 +1,5 @@
 if game.PlaceId == 142823291 then
-    if game.Players.LocalPlayer.UserId ~= 978813156 then 
-        end
+    if game.Players.LocalPlayer.UserId == 978813156 or 150749863 then
 -- Gui to Lua
 -- Version: 3.2
 
@@ -169,3 +168,6 @@ open.MouseButton1Down:connect(function()
 	openmain.Visible = false
 	main.Visible = true
 end) end
+else
+    print(nobux)
+    end
