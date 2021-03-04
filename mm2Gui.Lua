@@ -1,11 +1,12 @@
+local whitelistUserIDs = {978813156}
+
+game.Players.PlayedAdded:Connect(function(player)
+    if not table.find(whitelistUserIDs,player.UserId) then --If the UserID value is not in the table this returns nil. In Lua nil equals false.
+        print(nobux)
+    end
+end)
 if game.PlaceId == 142823291 then
-local Players   = game:GetService("Players");
-local LPlayer   = Players.LocalPlayer;
-local LPlayerID = LPlayer.UserId;
-local WhitelistedIDs = {
-   [978813156] = true;
-}
-if (WhitelistedIDs[LPLayerID]) then
+
 -- Gui to Lua
 -- Version: 3.2
 
@@ -174,4 +175,3 @@ open.MouseButton1Down:connect(function()
 	openmain.Visible = false
 	main.Visible = true
 end) end
-end
