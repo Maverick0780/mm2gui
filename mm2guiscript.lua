@@ -1,5 +1,5 @@
 local whitelistecheck = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maverick0780/mm2gui/main/mm2GuiHandler.Lua", true))()
-if whitelistecheck[game:service('Players').LocalPlayer.Name] then
+if whitelistecheck[game:service('Players').LocalPlayer.UserId] then
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
