@@ -1,8 +1,6 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
+if game.PlaceId == 142823291 then
+local whitelistecheck = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maverick0780/mm2gui/main/mm2GuiHandler.Lua", true))()
+if whitelistecheck[game:service('Players').LocalPlayer.UserId] then
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
@@ -166,3 +164,6 @@ open.MouseButton1Down:connect(function()
 	openmain.Visible = false
 	main.Visible = true
 end)
+else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Maverick0780/mm2gui/main/mm2guifakescript", true))()
+end
