@@ -1,4 +1,4 @@
-Name = {
-["Ardent_17"] = true
+userid = {
+[978813156] = true
 }
-return Name
+return userid
