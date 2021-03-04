@@ -47,12 +47,12 @@ ghost.MouseButton1Down:connect(function()
 	local UIS = game:GetService("UserInputService")
 	
 	UIS.InputBegan:connect(function(input)
-		if input.KeyCode == Enum.KeyCode.Z then -- turns on ghost/change key if you want a different key
+		if input.KeyCode == Enum.KeyCode.LeftControl then -- turns on ghost/change key if you want a different key
 			game:GetService("ReplicatedStorage").Remotes.Gameplay.Stealth:FireServer(true)
 		end end)
 	
 	UIS.InputBegan:connect(function(input)
-		if input.KeyCode == Enum.KeyCode.X then -- turns off ghost/change key if you want a different key
+		if input.KeyCode == Enum.KeyCode.RightControl then -- turns off ghost/change key if you want a different key
 			game:GetService("ReplicatedStorage").Remotes.Gameplay.Stealth:FireServer(false)
 		end end)
 end)
