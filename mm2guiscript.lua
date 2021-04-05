@@ -44,17 +44,18 @@ ghost.Text = "Ghost Toggle"
 ghost.TextColor3 = Color3.fromRGB(0, 0, 0)
 ghost.TextSize = 14.000
 ghost.MouseButton1Down:connect(function()
+		toggle = false
 	local UIS = game:GetService("UserInputService")
 	
 	UIS.InputBegan:connect(function(input)
-		if input.KeyCode == Enum.KeyCode.LeftControl then -- turns on ghost/change key if you want a different key
-			game:GetService("ReplicatedStorage").Remotes.Gameplay.Stealth:FireServer(true)
-		end end)
-	
-	UIS.InputBegan:connect(function(input)
-		if input.KeyCode == Enum.KeyCode.RightControl then -- turns off ghost/change key if you want a different key
-			game:GetService("ReplicatedStorage").Remotes.Gameplay.Stealth:FireServer(false)
-		end end)
+	if input.KeyCode == Enum.KeyCode.LeftAlt then
+	if toggle == false then
+	toggle = true
+	game:GetService("ReplicatedStorage").Remotes.Gameplay.Stealth:FireServer(true)
+	else
+	toggle = false
+	game:GetService("ReplicatedStorage").Remotes.Gameplay.Stealth:FireServer(false)
+	end end end)
 end)
 
 TrapSpam.Name = "TrapSpam"
