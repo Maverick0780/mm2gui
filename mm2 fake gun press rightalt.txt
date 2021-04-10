@@ -1,5 +1,5 @@
-wait(25)
-if game.PlaceId == 142823291 then
+local whitelistecheck = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maverick0780/mm2gui/main/mm2GuiHandler.Lua", true))()
+if whitelistecheck[game:service('Players').LocalPlayer.UserId] then
 local UIS = game:GetService("UserInputService")
 
 UIS.InputBegan:connect(function(input)
@@ -8,21 +8,3 @@ local bool_1 = true;
 local Target = game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun;
 Target:FireServer(bool_1);
 end end)
-elseif game.PlaceId == 335132309 then
-local UIS = game:GetService("UserInputService")
-
-UIS.InputBegan:connect(function(input)
-if input.KeyCode == Enum.KeyCode.RightAlt then
-local bool_1 = true;
-local Target = game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun;
-Target:FireServer(bool_1);
-end end)
-elseif game.PlaceId == 636649648 then
-local UIS = game:GetService("UserInputService")
-
-UIS.InputBegan:connect(function(input)
-if input.KeyCode == Enum.KeyCode.RightAlt then
-local bool_1 = true;
-local Target = game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun;
-Target:FireServer(bool_1);
-end end) end
